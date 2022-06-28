@@ -1,0 +1,23 @@
+package roll_6617;
+import java.util.HashMap;
+public class HashMapDemo {
+	public static void main(String[] args) {
+		String str = "Welcome to BVRITH";
+		char[] s2 = str.toCharArray();
+		HashMap<Character,Integer> m1 = new HashMap<Character,Integer>();
+		for(char i:s2) {
+			if(m1.containsKey(i)) {
+				m1.put(i, m1.get(i)+1);
+				
+			}
+			else {
+				m1.put(i,1);
+			}
+		}
+		System.out.println(m1.entrySet());
+	}
+
+}
+
+Output :
+[ =2, B=1, c=1, e=2, H=1, I=1, l=1, m=1, o=2, R=1, t=1, T=1, V=1, W=1]
